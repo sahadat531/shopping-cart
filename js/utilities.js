@@ -44,7 +44,8 @@ function calculateSobtotal () {
     const subtotal = document.getElementById( 'subtotal' );
     subtotal.innerText = finalTotal;
     
-    const TaxTotal = ( finalTotal * .1 ).toFixed( 2 );
+    const TaxTotalString = ( finalTotal * .1 ).toFixed( 2 );
+    const TaxTotal = parseFloat( TaxTotalString );
 
     const taxField = document.getElementById( 'tax' );
     taxField.innerText = TaxTotal;
